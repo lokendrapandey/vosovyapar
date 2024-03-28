@@ -1,7 +1,20 @@
 import React from 'react';
+import {  useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
+  
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    // Perform logout actions (e.g., clear token, user data, etc.)
+    // For example, you can clear the token from local storage
+    localStorage.removeItem('token');
+
+    // Redirect the user to the login page
+    navigate('/login');
+  };
+
   return (
     <nav id="sidebar" className=' text-center ' >
       <br />
@@ -13,20 +26,27 @@ const Sidebar = () => {
       <ul className="list-unstyled components" >
         <li >
         </li>
-        <br />
+        {/* <br /> */}
         <li>
-          <Link style={{ textDecoration: 'none' }} to="/dashboard/home">Dashboard</Link>
+          <Link style={{ textDecoration: 'none', color:'black' }} to="/dashboard/home">Dashboard</Link>
         </li>
-        <br/>
+        {/* <br/> */}
+        <h1></h1>
+
         <li>
-          <Link style={{ textDecoration: 'none' }} to="/dashboard/blogs">Blogs</Link>
+          <Link style={{ textDecoration: 'none' , color:'black' }} to="/dashboard/blogs">Blogs</Link>
         </li>
-        <br />
+        {/* <br /> */}
+        <h1></h1>
         <li>
-          <Link style={{ textDecoration: 'none' }} to="/dashboard/products">Products</Link>
+          <Link style={{ textDecoration: 'none', color:'black' }} to="/dashboard/products">Products</Link>
         </li>
+        {/* <br/> */}
+        <h1></h1>
+      <button style={{border:"none", background:"none"}} onClick={handleLogout}> Logout </button> 
       </ul>
-    </nav>
+       </nav>
+    
   );
 }
 

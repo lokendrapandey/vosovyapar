@@ -57,32 +57,35 @@ function Dashboard() {
   <div className="bg-inf" style={{ backgroundColor: '' }}>
      <Navbar bg="secondary" expand="lg" variant="light">
       <Container fluid>
-        <Navbar.Brand href="#">
+        <Navbar.Brand href="#">  <b> Voso </b> Vyapar
           <img
-            src="https://lh5.googleusercontent.com/p/AF1QipOMg6k-DXDd_LgAGNZMBgfekIDIVERJX1vD-h9c=w160-h160-k-no"
+            // src="https://lh5.googleusercontent.com/p/AF1QipOMg6k-DXDd_LgAGNZMBgfekIDIVERJX1vD-h9c=w160-h160-k-no"
             alt=""
-            style={{ height: '50px' }}
+            // style={{ height: '60px', width:"150px" }}
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#">Profile</Nav.Link>
-            <Dropdown>
+            <Nav.Link href="#"> </Nav.Link>
+            <Nav.Link href="#"> </Nav.Link>
+
+            <Dropdown className='' >
               <Dropdown.Toggle
                 variant="success"
                 id="dropdown-basic"
+                className='user_image'
                 style={{ background: 'none', border: 'none' }}
               >
                 <img
                   className="rounded-circle"
                   src={imageSrc}
                   alt=""
-                  style={{ height: '30px' }}
+                  style={{ height: '30px', border:"none" }}
                 />
               </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <div className="container d-flex justify-content-center align-items-center vh-10">
+              <Dropdown.Menu >
+                <div className="container d-flex justify-content-center align-items-center vh-10"  style={{ background: 'important', border: 'none' }} >
                   <img
                     className="rounded-circle mx-auto"
                     src={imageSrc}
@@ -90,17 +93,19 @@ function Dashboard() {
                     style={{ height: '60px' }}
                   />
                 </div>
-                <Dropdown.Item href="#/action-2">
+                <Dropdown.Item href="#/action-2" >
+                  <Card/>
                   {/* Add Card component here */}
                 </Dropdown.Item>
                 <Dropdown.Item href="#" className="text-center" onClick={handleLogout}>
                   Logout
                 </Dropdown.Item>
                 <Dropdown.Item href="#/action-1" className="text-center">
-                  Profile
+                  {/* Profile */}
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
+
           </Nav>
         </Navbar.Collapse>
       </Container>

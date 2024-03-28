@@ -5,6 +5,8 @@ import Dashboard from './Dashboard';
 import Products from './Components/Products';
 import Blogs from './Components/Blogs' 
 import Defdesh from './Defdesh';
+import Signout from './Signout';
+import './App.css'
 
 
 
@@ -30,8 +32,7 @@ function App() {
   }, [navigate, token]);
 
   return (
-    <div >
-  {/* <Blogs/> */}
+    <div>
 <Routes>
   <Route path='/login' element={<Login />} />
   <Route path='/dashboard' element={<Dashboard />}>

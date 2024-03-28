@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +39,26 @@
 
 .read-the-docs {
   color: #888;
+} */
+.user_image{
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.user_image:focus{
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.user_image:active{
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.user_image:focus-visible{
+  box-shadow: none !important;
+}
+.user_image{
+  background-color: none !important; 
+  /* background-color: aqua; */
 }

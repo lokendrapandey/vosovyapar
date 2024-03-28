@@ -1,11 +1,32 @@
-import React from 'react'
+import React from 'react';
 
 const Signout = () => {
   return (
-    <div>
-    <h1>signout</h1>      
-    </div>
-  )
-}
+    <nav>
+      <ul>
+        <li>VosoVyapar</li>
+        <li>III</li>
+        <li>E</li>
+        <li>Dashboard</li>
+        <li>Users</li>
+        <li>
+          <input type="checkbox" id="toggle" />
+          <label htmlFor="toggle">
+            Products and Galleries
+            <span className="checkmark"></span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="toggle2" />
+          <label htmlFor="toggle2">
+            Blogs and Services
+            <span className="checkmark"></span>
+          </label>
+        </li>
+        <li>LOGOUT</li>
+      </ul>
+    </nav>
+  );
+};
 
-export default Signout
+export default Signout;
